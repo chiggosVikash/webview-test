@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewScreen extends StatefulWidget {
+  const WebViewScreen({super.key});
+
   @override
-  _WebViewScreenState createState() => _WebViewScreenState();
+   WebViewScreenState createState() => WebViewScreenState();
 }
 
-class _WebViewScreenState extends State<WebViewScreen> {
+class WebViewScreenState extends State<WebViewScreen> {
   late final WebViewController _controller;
 
   @override
@@ -23,9 +25,6 @@ class _WebViewScreenState extends State<WebViewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('WebView'),
-      ),
       body: WebViewWidget(
         controller: _controller, // Pass the controller
       ),
